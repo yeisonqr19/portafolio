@@ -12,6 +12,11 @@ nav {
     background: linear-gradient(to right, #f9f9f9, #f3f0ff, #f9f9f9);
 }
 
+html.dark nav {
+    background: linear-gradient(to right, #121130, #1e1d4b, #121130);
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
+}
+
 nav ul.active {
     right: 0;
 }
@@ -41,6 +46,10 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+html.dark ul li a {
+    color: #fff;
+}
+
 nav ul li a::after{
     content: "";
     width: 0;
@@ -60,7 +69,7 @@ nav .fa-solid{
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     
     nav .fa-solid {
         display: block;
@@ -106,6 +115,10 @@ nav .fa-solid{
 
     nav ul .fa-bars {
         color: #3931e2;
+    }
+
+    html.dark .fa-bars {
+        color: #fff;
     }
     
 }

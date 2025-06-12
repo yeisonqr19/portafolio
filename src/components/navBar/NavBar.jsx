@@ -1,14 +1,24 @@
-import React from "react";
+import { useContext, useState } from "react";
 import "./navBar.css";
 import logoLive from "../../assets/logoLive.png";
 import logoDark from "../../assets/logoDark.png";
+import { TemaToogle } from "../temaToogle/TemaToogle";
+import { TemaContext } from "../../temaContext/TemaContext";
 
 const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const { tema } = useContext(TemaContext);
+
   return (
     <nav>
-      <img src={logoLive} alt="logo" className="logo" />
+      <img
+        src={tema === "light" ? logoLive : logoDark}
+        alt="logo"
+        className="logo"
+      />
 
-      <ul>
+      <ul className={menuOpen ? "active" : ""}>
         <li>
           <a href="#">Home</a>
         </li>
@@ -18,21 +28,23 @@ const NavBar = () => {
         </li>
 
         <li>
-          <a href="#">Habilidades</a>
+          <a href="#">Portafolio</a>
         </li>
 
         <li>
-          <a href="#">Portafolio</a>
+          <a href="#">Habilidades</a>
         </li>
 
         <li>
           <a href="#">Contacto</a>
         </li>
 
-        <i className="fa-solid fa-xmark"></i>
+        <i className="fa-solid fa-xmark" onClick={() => setMenuOpen(false)}></i>
       </ul>
 
-      <i className="fa-solid fa-bars"></i>
+      <TemaToogle />
+
+      <i className="fa-solid fa-bars" onClick={() => setMenuOpen(true)}></i>
     </nav>
   );
 };

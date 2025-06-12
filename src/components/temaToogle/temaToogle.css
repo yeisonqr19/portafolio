@@ -1,0 +1,16 @@
+.tema-toogle-button{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #057dcd;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+}
+
+.tema-toogle-button:hover {
+    opacity: 0.9;
+}
