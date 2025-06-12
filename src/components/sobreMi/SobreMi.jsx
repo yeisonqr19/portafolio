@@ -6,6 +6,7 @@ export const SobreMi = () => {
   return (
     <div className="sobreMi-detalles">
       <img src={imagensobreMi} alt="Sobre mi" />
+
       <div className="sobreMi-infos">
         <h1>Sobre mí</h1>
         <p className="descripcion">
@@ -37,6 +38,9 @@ export const SobreMi = () => {
           </div>
         </div>
       </div>
+
+      
+
     </div>
   );
 };
