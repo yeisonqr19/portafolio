@@ -1,0 +1,91 @@
+.sobreMi-detalles {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8vw;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.sobreMi-detalles img {
+  width: 40%;
+  max-width: 350px;
+  z-index: 1;
+  border-radius: 13px;
+}
+
+.sobreMi-infos {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
+
+.sobreMi-infos h1 {
+  font-size: 3rem;
+  color: #232155;
+  margin-bottom: 20px;
+}
+
+.sobreMi-infos p {
+  color: #4a4b6d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+html.dark .sobreMi-infos p {
+  color: #f9f9f9;
+}
+
+/* Seccion de las experiencias */
+
+.seccion-experiencias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.experiencia {
+  text-align: center;
+}
+
+.experiencia i {
+  font-size: 2rem;
+  color: #3931e2;
+  margin-bottom: 10px;
+}
+
+.experiencia span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3931e2;
+}
+
+.experiencia p {
+  color: #4a4b6d;
+  margin-top: 5px;
+}
+
+html.dark .experiencia p {
+  color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .sobreMi-detalles {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .sobreMi-detalles img {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  .sobreMi-infos {
+    max-width: 100%;
+    text-align: center;
+  }
+}
