@@ -1,0 +1,96 @@
+.proyectos {
+  text-align: center;
+  margin-top: 50px;
+  padding: 0 8vw;
+}
+
+.proyectos h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #232155;
+  margin-bottom: 40px;
+}
+
+.proyectos-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.proyecto-card {
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0,3s ease;
+}
+
+html.dark .proyecto-card {
+  border: 1px solid #49478d;
+  background-color: #232155;
+}
+
+.proyecto-imagen {
+  width: 50%;
+  object-fit: cover;
+}
+
+.proyecto-content {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.proyecto-content h3 {
+  font-size: 1.2rem;
+  color: #232155;
+  font-weight: 600;
+}
+
+html.dark .proyecto-content h3 {
+  color: #fff;
+}
+
+.proyecto-content p {
+  font-weight: 400;
+  color: #4b4c64;
+}
+
+html.dark .proyecto-content p {
+  color: #f9f9f9;
+}
+
+.button-verProyecto {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #3931e2;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.button-verProyecto:hover {
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .proyectos-container {
+    grid-template-columns: 1fr 1fr; /* dos columnas */
+  }
+}
+
+@media (max-width: 600px) {
+  .proyecto-card {
+    flex-direction: column;
+  }
+
+  .proyecto-imagen,
+  .proyecto-content {
+    width: 100%;
+  }
+}
