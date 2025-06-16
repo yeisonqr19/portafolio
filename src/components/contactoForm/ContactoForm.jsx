@@ -4,13 +4,13 @@ import "./contactoForm.css";
 export const ContactoForm = () => {
   return (
     <>
-      <div className="contacto">
+      <div className="contacto" id="contacto">
         <h1>Contacto</h1>
         <div className="contacto-container">
           <div className="contacto-info">
             <div className="info-content">
               <i className="fas fa-usercircle icon"></i>
-              <h2>INFORMACION DE CONTACTO</h2>
+              <h2>INFORMACIÓN DE CONTACTO</h2>
               <p>
                 <i className="fas fa-envelope"></i>
                 ejemplo@gmail.com
@@ -25,7 +25,7 @@ export const ContactoForm = () => {
 
           <div className="contacto-form">
             <h2>Envia tu Mensaje</h2>
-            <form action="">
+            <form action="https://formspree.io/f/xqabbjzk" method="POST">
               <input
                 type="text"
                 name="nombres"

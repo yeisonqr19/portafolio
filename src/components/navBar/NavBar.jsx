@@ -10,6 +10,17 @@ const NavBar = () => {
 
   const { tema } = useContext(TemaContext);
 
+  const handleScroll = (e, seccionID) => {
+    e.preventDefault();
+    const seccion = document.getElementById(seccionID);
+
+    if (seccion) {
+      seccion.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    setMenuOpen(false);
+  };
+
   return (
     <nav>
       <img
@@ -20,23 +31,36 @@ const NavBar = () => {
 
       <ul className={menuOpen ? "active" : ""}>
         <li>
-          <a href="#">Home</a>
+          <a href="#hero" onClick={(e) => handleScroll(e, "hero")}>
+            Home
+          </a>
         </li>
 
         <li>
-          <a href="#">Sobre mi</a>
+          <a href="#sobreMi" onClick={(e) => handleScroll(e, "sobreMi")}>
+            Sobre mi
+          </a>
         </li>
 
         <li>
-          <a href="#">Portafolio</a>
+          <a
+            href="#skills"
+            onClick={(e) => handleScroll(e, "skills")}
+          >
+            Habilidades
+          </a>
         </li>
 
         <li>
-          <a href="#">Habilidades</a>
+          <a href="#proyectos" onClick={(e) => handleScroll(e, "proyectos")}>
+            Aplicaciones
+          </a>
         </li>
 
         <li>
-          <a href="#">Contacto</a>
+          <a href="#contacto" onClick={(e) => handleScroll(e, "contacto")}>
+            Contacto
+          </a>
         </li>
 
         <i className="fa-solid fa-xmark" onClick={() => setMenuOpen(false)}></i>

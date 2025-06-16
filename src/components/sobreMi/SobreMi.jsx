@@ -12,7 +12,7 @@ export const SobreMi = () => {
   }, []);
 
   return (
-    <div className="sobreMi-detalles">
+    <div className="sobreMi-detalles" id="sobreMi">
       <img src={imagensobreMi} alt="Sobre mi" />
 
       <div className="sobreMi-infos">

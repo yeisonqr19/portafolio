@@ -39,7 +39,6 @@ const proyectosItems = [
 ];
 
 export const Proyectos = () => {
-    
   useEffect(() => {
     AOS.init({
       once: true,
@@ -48,7 +47,7 @@ export const Proyectos = () => {
 
   return (
     <>
-      <div className="proyectos">
+      <div className="proyectos" id="proyectos">
         <h1>Aplicaciones</h1>
         <div className="proyectos-container">
           {proyectosItems.map((item, index) => (

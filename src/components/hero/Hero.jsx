@@ -3,7 +3,7 @@ import fotoHero from "../../assets/foto.png";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="hero" id="hero">
       <div className="text-container">
         <span>Hola Soy,</span>
         <h1>Yeison Quiroz.</h1>
